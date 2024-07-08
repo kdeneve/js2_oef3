@@ -12,3 +12,12 @@
 // Zorg dat het instellen van de event handler
 // gebeurt wanneer het window load event wordt getriggered.
 // Maak gebruik van een init functie expressie (const)
+
+const init = function () {
+  const h1 = document.getElementById('h1');
+  h1.onmouseover = function () {
+    h1.innerHTML = h1.innerHTML.substring(1);
+  };
+};
+
+window.onload = init;
